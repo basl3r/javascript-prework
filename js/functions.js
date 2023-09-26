@@ -6,6 +6,7 @@ function printMessage(msg){
 
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
+	console.log('Messages cleared');
 }
 
 function getMoveName(argMoveId){
