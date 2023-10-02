@@ -1,5 +1,6 @@
 function playGame(playerInput) {
     clearMessages();
+    clearResults();
 
     // Draw number between 1 - 3
     let randomNumber = Math.floor(Math.random() * 3 + 1)
@@ -28,7 +29,7 @@ function playGame(playerInput) {
     } else {
         computerMove = 'nożyce'
     } */
-    
+
     // Display 
     console.log('Komputer wylosował liczbę: ' + randomNumber);
     
@@ -44,6 +45,12 @@ function playGame(playerInput) {
     
     printMessage('Wynik: ' + displayResult(computerMove, playerMove));
     
+    console.log('displayResult = ' + displayResult(computerMove, playerMove));
+
+    addPoints(displayResult(computerMove, playerMove));
+
+    printResults('X: ' + wins + ' Y: ' + losses);
+
     /* if(playerMove == computerMove) {
         printMessage('Remis!')
     } else if (playerMove > computerMove) {
@@ -51,8 +58,10 @@ function playGame(playerInput) {
     } else {
         printMessage('Przegrałeś!')
     } */
-    
     }
+
+let wins = 0;
+let losses = 0;
 
 document.getElementById('rock').addEventListener('click', function() {
     playGame(1)
@@ -65,3 +74,5 @@ document.getElementById('paper').addEventListener('click', function() {
 document.getElementById('scissors').addEventListener('click', function() {
     playGame(3)
 });
+
+

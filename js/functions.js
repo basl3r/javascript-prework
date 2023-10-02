@@ -37,3 +37,27 @@ function displayResult(argComputerMove, argPlayerMove){
 		return 'Wygrywasz!';
 	}
 }
+
+function printResults(res) {
+	let div = document.createElement('div');
+	div.innerHTML = res;
+	document.getElementById('results').appendChild(div);
+}
+
+function clearResults(){
+	document.getElementById('results').innerHTML = '';
+	console.log('Results cleared');
+}
+
+function addPoints (argResult) {
+	if(argResult == 'Wygrywasz!') {
+		wins++;
+	} else if (argResult == 'Przegrywasz!') {
+		losses++;
+	} else 
+		return 0;
+
+	console.log ('wins: ' + wins);
+    console.log ('losses: ' + losses);
+}
+
