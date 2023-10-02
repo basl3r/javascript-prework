@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+button {
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    
+}
+
+header {
+    height: 100vh;
+    background-image: url('/images/godzilla-vs-kong-4k-9v.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} 
+
+header .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+}
+
+header .card::before {
+    position: absolute;
+    content: '';
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    filter: blur(4px);
+    opacity: 0.3;
+}
+
+header .card .on-top {
+    z-index: 100;
+}
+
+header .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    padding: 30px;
+    margin-bottom: 5px;
+}
+
+header .header-inner h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 1px 1px white;
+}
+
+header .header-inner p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+#messages,
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 0 100%;
+}
+
+#messages {
+    font-size: 30px;
+    text-shadow: 1px 1px white;
+}
+
+
+

@@ -36,9 +36,9 @@ function playGame(playerInput) {
     
     // Display computer's and player's moves
     
-    printMessage('Mój ruch to: ' + computerMove)
+    printMessage('Mój ruch to: ' + computerMove + '&nbsp')
     
-    printMessage('Twój ruch to: ' + playerMove)
+    printMessage('Twój ruch to: ' + playerMove + '&nbsp')
     
     // Display the result
     
