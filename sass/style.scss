@@ -76,6 +76,7 @@ header .header-inner p {
     font-size: 18px;
     margin-top: 5px;
 }
+
 #messages,
 #buttons {
     display: flex;
@@ -89,5 +90,6 @@ header .header-inner p {
     text-shadow: 1px 1px white;
 }
 
-
-
+#results {
+    font-size: 30px;
+}
