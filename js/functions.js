@@ -1,15 +1,15 @@
-function printMessage(msg){
+const printMessage = function(msg){
 	let div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
 
-function clearMessages(){
+const clearMessages = function(){
 	document.getElementById('messages').innerHTML = '';
 	console.log('Messages cleared');
 }
 
-function getMoveName(argMoveId){
+const getMoveName = function (argMoveId){
 
 	console.log('MoveId ' + argMoveId);
 
@@ -21,11 +21,9 @@ function getMoveName(argMoveId){
 		return 'nożyce';
 	}
 
-	printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-	return 'nieznany ruch';
 }
 
-function displayResult(argComputerMove, argPlayerMove){
+const getResult = function(argComputerMove, argPlayerMove){
 
 	console.log('moves Comp - Player:', argComputerMove,' - ', argPlayerMove);
 
@@ -38,26 +36,13 @@ function displayResult(argComputerMove, argPlayerMove){
 	}
 }
 
-function printResults(res) {
+const printResults = function(res) {
 	let div = document.createElement('div');
 	div.innerHTML = res;
 	document.getElementById('results').appendChild(div);
 }
 
-function clearResults(){
+const clearResults = function (){
 	document.getElementById('results').innerHTML = '';
 	console.log('Results cleared');
 }
-
-function addPoints (argResult) {
-	if(argResult == 'Wygrywasz!') {
-		wins++;
-	} else if (argResult == 'Przegrywasz!') {
-		losses++;
-	} else 
-		return 0;
-
-	console.log ('wins: ' + wins);
-    console.log ('losses: ' + losses);
-}
-
